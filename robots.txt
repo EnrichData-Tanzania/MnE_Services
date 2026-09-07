@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://enrichdata-tanzania.github.io/MnE_Services/sitemap.xml
