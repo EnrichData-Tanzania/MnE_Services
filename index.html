@@ -1,259 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnrichData Tanzania</title>
-    <style>
-        /* Base Styles */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #27ae60;
-            --light-bg: #f9f9f9;
-            --text-color: #333;
+    <title>EnrichData Tanzania | M&E and Data Consulting</title>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1E3A8A',
+                            teal: '#0F766E',
+                            light: '#F0F9FF'
+                        }
+                    }
+                }
+            }
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        
-        /* Navigation */
-        header {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header h1 {
-            font-size: 1.5rem;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: var(--light-bg);
-            text-align: center;
-            padding: 4rem 2rem;
-            border-bottom: 4px solid var(--secondary-color);
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Sections */
-        section {
-            padding: 3rem 5%;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-        }
-        
-        /* Grid Layouts for Services and Advantages */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-top: 4px solid var(--secondary-color);
-        }
-        .card h3 {
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        .card ul {
-            margin-left: 1.5rem;
-        }
-        .card ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Offers Section */
-        .offers {
-            background-color: var(--secondary-color);
-            color: #fff;
-            text-align: center;
-        }
-        .offers h2 {
-            color: #fff;
-        }
-        .offer-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            margin: 1rem auto;
-            border-radius: 8px;
-            max-width: 600px;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        /* Footer / Contact */
-        footer {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 3rem 5%;
-            text-align: center;
-        }
-        footer h3 {
-            margin-bottom: 1rem;
-        }
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 2rem;
-        }
-        .contact-info a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-        .registration {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            padding-top: 1rem;
-            margin-top: 1rem;
-        }
-    </style>
+    </script>
 </head>
-<body>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
 
-    <header>
-        <h1>EnrichData Tanzania</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#advantages">Why Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-bold text-2xl text-brand-blue tracking-tight">ENRICHDATA<span class="text-brand-teal">.</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-brand-blue transition font-medium">About</a>
+                    <a href="#services" class="text-gray-600 hover:text-brand-blue transition font-medium">Services</a>
+                    <a href="#sectors" class="text-gray-600 hover:text-brand-blue transition font-medium">Sectors</a>
+                    <a href="#advantage" class="text-gray-600 hover:text-brand-blue transition font-medium">Why Us</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#contact" class="bg-brand-blue text-white px-6 py-2 rounded-full hover:bg-blue-800 transition shadow-lg font-medium">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <section class="hero" id="about">
-        <h2>Empowering Your Data & M&E Solutions</h2>
-        <h3>Welcome to EnrichData Tanzania! You have chosen the right M&E Consulting firm </h3> 
-        <p>We are the best for all firms concerning with data gathering. Whether you need mobile data collection setups or complex M&E consultancy, our intelligent systems and 10+ years of experience are here to ensure your success.</p>
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-32 flex items-center min-h-screen" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-blue-900 bg-opacity-80"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-teal-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Empowering Social Change</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Transforming Field Data <br class="hidden md:block"/> into Verifiable Impact
+            </h1>
+            <p class="mt-4 text-xl text-gray-200 max-w-3xl mx-auto mb-10 leading-relaxed">
+                End-to-end Monitoring & Evaluation systems, mobile data collection pipelines, and custom analytics for NGOs, development partners, and research institutions in Tanzania.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-brand-teal text-white px-8 py-3 rounded-full hover:bg-teal-700 transition shadow-lg font-semibold text-lg">Get a Free Consultation</a>
+                <a href="#services" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-brand-blue transition font-semibold text-lg">Explore Services</a>
+            </div>
+        </div>
     </section>
 
-    <section id="services">
-        <h2 class="section-title">Our Services</h2>
-        <p style="text-align: center; margin-bottom: 2rem;">*** We provide the above services in full or per service. All services are provided with contracts upon agreements.</p>
-        
-        <div class="grid-container">
-            <div class="card">
-                <h3>Digital and Mobile Data Collection</h3>
-                <ul>
-                    <li>Create Mobile surveys through Ms. Excel or Web platforms.</li>
-                    <li>Change Excel surveys/forms into XML forms to be used in Smart Phones or Tablets.</li>
-                    <li>Creating Servers (ODK Aggregate integrated with Google API) with your own login details.</li>
-                    <li>Linking ODK forms to Servers using ODK Collect for data storage, analysis, mapping, and publishing.</li>
-                    <li>In-field training on how to use Mobile data devices for a low additional cost of 3% of the actual training costs.</li>
-                    <li>Help to do analysis of various data collected through Ms. Excel or Statistical Software.</li>
-                </ul>
+    <!-- About / Quotation Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i class="fas fa-quote-left text-4xl text-brand-teal opacity-50 mb-6"></i>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Improving Your Data to Add Value — The EnrichData Way.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                We specialize in Monitoring and Evaluation for organizations that challenge poverty, inequality, and systemic barriers in Tanzania. Whether you are managing short-term service delivery, overseeing capacity building programs in education, or implementing social change through partners, we provide the technical architecture to measure your true impact.
+            </p>
+            <div class="inline-block bg-brand-light text-brand-blue px-6 py-2 rounded-full font-semibold">
+                <i class="fas fa-award mr-2"></i> Over 15 Years of Field & Technical Experience
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Our Core Services</h2>
+                <div class="w-24 h-1 bg-brand-teal mx-auto mt-4 rounded"></div>
             </div>
             
-            <div class="card">
-                <h3>M&E Consultancy</h3>
-                <ul>
-                    <li>Assessments of projects, performance and impact evaluations.</li>
-                    <li>Data quality assessments and performance monitoring systems.</li>
-                    <li>Project, program, and M&E system design[cite: 2].</li>
-                    <li>Results framework development, research, survey and analysis.</li>
-                    <li>Tracking impacts of social awareness campaigns.</li>
-                    <li>Facilitation of training to build and develop capacities.</li>
-                    <li>Part-time services for Project M&E in organizations.</li>
-                    <li>Creation of Impressive Dynamic Excel Databases (IDED) for outputs and results.</li>
-                </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow p-8 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Mobile Data Collection</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Conversion of Excel surveys to XML forms for offline Android deployment. Custom cloud servers (ODK Aggregate) with secure, private login credentials.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow p-8 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-teal-50 text-brand-teal rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-teal group-hover:text-white transition-colors">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Strategic M&E Consultancy</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Results Framework design, impact evaluations (baseline/endline), Data Quality Assessments (DQA), and part-time M&E embedded support.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow p-8 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Capacity Building</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Institutional capacity development, specialized workshops for NGO staff, and comprehensive in-field enumerator training on devices.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow p-8 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-teal-50 text-brand-teal rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-teal group-hover:text-white transition-colors">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Advanced Analytics</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Creation of Impressive Dynamic Excel Databases (IDED) tailored to track outputs, and professional statistical analysis of complex results.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="advantages" class="hero">
-        <h2 class="section-title" style="color: var(--primary-color);">Why you should Contact Us</h2>
-        <div class="grid-container" style="text-align: left;">
-            <div class="card">
-                <h3>What Makes Us Special</h3>
-                <ul>
-                    <li>We make your data more accurate and no more cheating.</li>
-                    <li>We help you collect and submit data timely.</li>
-                    <li>Data entry errors eliminated.</li>
-                    <li>Collects GPS Coordinates for all locations of the projects or activities or points, therefore no more data cooking.</li>
-                    <li>Easy Mapping of all locations of your WORK or PLACES.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Our Qualities and Strengths</h3>
-                <ul>
-                    <li>Respects to our customers.</li>
-                    <li>Over 15 years of experience in field of programming, M&E and Data collection.</li>
-                    <li>Intelligent in Mobile data collection setups, systems and trainings.</li>
-                    <li>Best in interpreting complex results.</li>
-                    <li>Success to customers is the best thing we seek.</li>
-                </ul>
+    <!-- Sectors with Touching Images -->
+    <section id="sectors" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80" alt="Social Impact" class="rounded-2xl shadow-2xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Sectors We Support</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">We have extensive experience supporting localized and national interventions across critical development sectors. Our systems ensure that your resources are tracked and your impact is proven.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                            <i class="fas fa-book-reader text-brand-blue text-xl w-8 text-center"></i>
+                            <span class="font-semibold text-gray-800">Education Programs & Capacity Building</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                            <i class="fas fa-hand-holding-water text-brand-teal text-xl w-8 text-center"></i>
+                            <span class="font-semibold text-gray-800">Water, Sanitation, and Hygiene (WASH)</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                            <i class="fas fa-leaf text-brand-blue text-xl w-8 text-center"></i>
+                            <span class="font-semibold text-gray-800">Climate Change & Environmental Health</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-lg">
+                            <i class="fas fa-venus-mars text-brand-teal text-xl w-8 text-center"></i>
+                            <span class="font-semibold text-gray-800">Gender Mainstreaming & Equality Initiatives</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="offers">
-        <h2>Special Offers</h2>
-        <div class="offer-box">
-            Save up to 10% of the required cost! for Mobile data collection services
-        </div>
-        <div class="offer-box">
-            Save up to 20% of the required costs! for M&E Consultancy and programming
+    <!-- The Advantage / Trust Section -->
+    <section id="advantage" class="py-20 bg-brand-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-12">The EnrichData Advantage</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div>
+                    <div class="bg-white bg-opacity-10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl text-teal-400">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Zero-Trust Data Integrity</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">We eliminate data entry errors and data cooking through automated validation constraints and built-in skip-logic.</p>
+                </div>
+                <div>
+                    <div class="bg-white bg-opacity-10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl text-teal-400">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">100% Spatial Accuracy</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">Every survey collects precise GPS coordinates, mapping all project locations, activities, and beneficiary points accurately.</p>
+                </div>
+                <div>
+                    <div class="bg-white bg-opacity-10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl text-teal-400">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cost Efficiency</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">Highly competitive pricing with partnership savings up to 10% on mobile data setups and 20% on M&E programming.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <h3>Contact Us</h3>
-        <p>We are the best for Individuals, NGOs, CSOs, CBOs, Research Institutions and Companies which collect and analyze data.</p>
-        <br>
-        <div class="contact-info">
-            <p>0758 216 364</p>
-            <p>info.enrichdata@gmail.com </p>
-            <p>https://enrichdata-tanzania.github.io/MnE_Services </p>
-        </div>
-        <div class="registration">
-            <p>EnrichData Tanzania is registered under The Business Names (Registration) Act (Cap 213) in Tanzania No: 432636.</p>
+    <!-- Footer & Contact -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Branding -->
+                <div>
+                    <span class="font-bold text-2xl text-white tracking-tight block mb-4">ENRICHDATA<span class="text-brand-teal">.</span></span>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                        We proudly serve Individuals, NGOs, CSOs, CBOs, Research Institutions, and Companies looking to maximize their data accuracy.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Social placeholders -->
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-teal transition text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-teal transition text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Core Services</a></li>
+                        <li><a href="#sectors" class="hover:text-white transition">Sectors We Support</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-brand-teal"></i>
+                            <span>Njombe, Tanzania</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-brand-teal"></i>
+                            <span>+255 758 216 364</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-brand-teal"></i>
+                            <a href="mailto:info.enrichdata@gmail.com" class="hover:text-white transition">info.enrichdata@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
+                <p class="mb-2">EnrichData Tanzania is legally registered under The Business Names (Registration) Act (Cap 213) in Tanzania, Registration No: 432636.</p>
+                <p>&copy; 2026 EnrichData Tanzania. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
